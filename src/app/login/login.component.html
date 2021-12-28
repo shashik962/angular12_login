@@ -1,0 +1,25 @@
+
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+  
+      <!-- Icon -->
+      <div class="fadeIn first">
+        <fa-icon [icon]="faLock" class='fa-3x'></fa-icon><br>
+        <h1>Welcome</h1>
+      </div>
+  
+      <!-- Login Form -->
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <input type="text" id="login" class="fadeIn second" name="email" placeholder="Email" formControlName="email">
+        <input type="password" id="password" class="fadeIn third" name="password" placeholder="Password" formControlName="password">
+        <input type="submit" class="fadeIn fourth" value="Log In">
+      </form>
+  
+      <!-- Remind Passowrd -->
+      <div id="formFooter">
+        <a class="underlineHover" routerLink="../forgot-password">Forgot Password?</a>
+      </div>
+  
+    </div>
+  </div>
